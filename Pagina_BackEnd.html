@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEP</title>
+
+
+
+
+<style>
+
+.body{
+    color: #F8F9FA;
+}
+
+
+.texto{
+    font-size: 25px;
+    color:rgb(4, 53, 201);
+    text-align: center;
+    background: #1A73E8;
+    border-radius: 20px;
+    border: 5px;
+}
+
+.conteiner-botao{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#botao{
+    color:rgb(0, 24, 95);
+    background: #1A73E8;
+    border-radius: 20px;
+}
+#cep{
+    font-size: 25px;
+    color:rgb(0, 24, 95);
+    background: #1A73E8;
+    border-radius: 20px;
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+    
+
+    <div class="texto">
+        <h1>Endereço</h1>
+
+    </div>
+
+
+  <div class="conteiner-botao">
+        <input type="text" id="cep">
+        <button onclick="mostrar()" id="botao">Enviar</button>
+
+  </div>
+
+  <p id="resposta"></p>
+</body>
+
+
+
+
+
+
+
+<script>
+
+function mostrar(){
+     const cep = document.getElementById("cep").value
+
+        validacep=/^[0-9]{8}$/
+
+        if(validacep.test(cep)){
+     const link = "https://viacep.com.br/ws/" + cep + "/json/?callback=preencherEndereco"
+     var script = document.createElement("script")
+     script.src = link
+     document.body.appendChild(script)
+        }else{
+            resposta.textContent = "O CEP digitado está fora do padrão. Digite 8 números!"
+            document.getElementById("cep").value=""
+        }
+    
+    }
+
+function preencherEndereco(conteudo){
+    
+            if("erro" in conteudo){
+               resposta.innerHTML= "CEP não encontrado"
+            }else{
+                resposta.innerHTML = "Rua" + conteudo.rua
+            }
+            
+        }
+
+
+
+
+</script>
+
+
+</html>
