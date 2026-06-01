@@ -96,7 +96,10 @@ function preencherEndereco(conteudo){
             if("erro" in conteudo){
                resposta.innerHTML= "CEP não encontrado"
             }else{
-                resposta.innerHTML = "Rua" + conteudo.rua
+                resposta.innerHTML=conteudo.logradouro + ", " +
+conteudo.bairro + ", " +
+conteudo.localidade + " - " +
+conteudo.uf
             }
             
         }
