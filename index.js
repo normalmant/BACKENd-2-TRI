@@ -43,5 +43,3 @@ app.get("/ola", (req, res) => {
 app.listen(port,()=>{
     console.log("API executando na porta "+port)
 })
-
-//renato
