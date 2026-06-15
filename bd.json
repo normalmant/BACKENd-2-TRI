@@ -1,0 +1,23 @@
+[
+    {
+        "nome": "Siclano",
+        "data_nasc": "10/01/1985",
+        "cpf": "12345678900",
+        "emai": "siclano@gmail.com.br",
+        "senha": "siclano10#"
+    },
+    {
+        "nome": "Roberto",
+        "data_nasc": "25/12/43",
+        "cpf": "150.395.234-54",
+        "emai": "Roberto@gmail.com.br",
+        "senha": "robero123#"
+    },
+    {
+        "nome": "Sabrina",
+        "data_nasc": "19/11/1985",
+        "cpf": "510.447.38",
+        "emai": "Sa@gmail.com.br",
+        "senha": "SA23#"
+    }
+]
