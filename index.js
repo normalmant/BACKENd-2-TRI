@@ -7,8 +7,8 @@ const port= 3000
 
 app.get("/ola", (req, res) => {
     res.json({
-        nome: "Renato",
-        idade: "16 anos"
+        nome: "Carlos Alberto",
+        idade: "72 anos"
     });
 });
 
