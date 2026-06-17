@@ -25,6 +25,20 @@ app.post("/clientes", (req, res) => {
 });
 
 
+
+app.get("/clientes",(req,res)=>{
+    try{
+        const bd=JSON.parse(fs.readFileSync("bd.json","utf8"))
+
+        res.status(200).json({ respota:bd})
+
+
+        
+    }catch(erro){
+        res.status(500).json({erro:erro.message})
+    }
+});
+
 app.get("/perfil", (req, res) => {
     res.json({
         nome: "Carlos Alberto",
