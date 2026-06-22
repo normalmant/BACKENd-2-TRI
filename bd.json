@@ -1,1 +1,20 @@
-[{"Nome":"Renato","idade":"16 anos"}]
+[
+    {
+        "nome": "Mario",
+        "idade": "37 anos",
+        "cpf": 13456798438,
+        "email": "Mario@gmail.com.br"
+    },
+    {
+        "nome": "Fernando",
+        "idade": "77 anos",
+        "cpf": 12345678900,
+        "email": "Fer123@gmail.com.br"
+    },
+    {
+        "nome": "Renato",
+        "idade": "18 anos",
+        "cpf": 16020796922,
+        "email": "mascare23@gmail.com.br"
+    }
+]
