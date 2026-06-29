@@ -83,6 +83,32 @@ app.get("/clientes/nome/:nome",(req,res)=>{
 
 
 
+app.delete("/clientes/:cpf",(req,res)=>{
+
+    const cpf= req.params.cpf
+
+
+    try{
+        const bd=JSON.parse(fs.readFileSync("bd.json","utf8"))
+
+        const indiceCliente=bd.findIndex((cliente)=>cliente.cpf==cpf)
+        if(indiceCliente==-1){
+            return res.status(404).json({erro: "Cliente não existe no Banco de Dados"})
+        }
+
+        bd.splice(indiceCliente,1)
+
+        fs.writeFileSync("bd.json",JSON.stringify(bd),"utf8")
+        res.status(200).json({resposta:"Cliente apagado"})
+    }catch(erro){
+        res.status(500).json({erro:erro.message})
+    }
+});
+
+
+
+
+
 
 
 

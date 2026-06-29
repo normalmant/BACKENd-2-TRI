@@ -6,15 +6,9 @@
         "email": "Mario@gmail.com.br"
     },
     {
-        "nome": "Fernando",
-        "idade": "77 anos",
-        "cpf": 12345678900,
-        "email": "Fer123@gmail.com.br"
-    },
-    {
-        "nome": "Renato",
-        "idade": "18 anos",
+        "nome": "Rafael",
+        "idade": "27 anos",
         "cpf": 16020796922,
-        "email": "mascare23@gmail.com.br"
+        "email": "Rafa@gmail.com.br"
     }
 ]
